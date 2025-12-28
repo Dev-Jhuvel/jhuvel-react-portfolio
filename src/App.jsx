@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='w-full'>
         <Introduction/>
-        <div className='flex gap-5'>
+        <div className='flex gap-5 max-sm:flex-col'>
           <About />
           <Experience />
         </div>
