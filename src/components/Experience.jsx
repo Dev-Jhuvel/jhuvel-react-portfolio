@@ -14,7 +14,7 @@ function Experience(){
         <h1 className="text-2xl font-bold text-left pl-2 flex items-center p-1 max-sm:text-xl"><Icon className="mr-5" />Experience</h1>
         <ul className="list-none w-full">
            {experiences.map((value, index) => (
-            <li className="font-bold text-xs flex justify-between text-left items-center my-2 hover:bg-gray-300 rounded-2xl px-3 py-1 cursor-pointer max-sm:text-base" key={index} onMouseOver={() => setIcon(value.icon)} onMouseOut={() => setIcon(BriefcaseBusiness)}>
+            <li className="font-bold text-xs flex justify-between text-left items-center my-2 hover:bg-gray-300 rounded-2xl px-3 py-1 cursor-pointer max-sm:text-sm" key={index} onMouseOver={() => setIcon(value.icon)} onMouseOut={() => setIcon(BriefcaseBusiness)} onClick={() => setIcon(value.icon)}>
                 <span>{value.title}
                     <p className="font-normal">{value.company}</p>
                 </span>
