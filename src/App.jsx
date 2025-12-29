@@ -5,6 +5,7 @@ import Introduction from './components/Introduction.jsx'
 import About from './components/About.jsx'
 import Experience from './components/Experience.jsx'
 import './App.css'
+import TechStack from './components/TechStack.jsx'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <About />
           <Experience />
         </div>
+        <TechStack />
     </div>
   )
 }
