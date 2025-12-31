@@ -30,7 +30,7 @@ function TechStack(){
     const [hoveredTech, setHoveredTech] = useState(false);
         
     return (
-        <div className="w-[70%] border border-gray-300 rounded-xl p-2 max-sm:w-full animate-fade-right animate-delay-2000 animate-duration-500 max-sm:animate-delay-2500">
+        <div className="w-full border border-gray-300 rounded-xl p-2 max-sm:w-full animate-fade-right animate-delay-2000 animate-duration-500 max-sm:animate-delay-2500">
             <h1 className="text-2xl font-bold text-left pl-2 flex items-center p-1 max-sm:text-xl"><Blocks className="mr-5" />Tech Stack</h1>
             {Object.entries(technologies).map(([category, values]) => (
                 <div key={category}>

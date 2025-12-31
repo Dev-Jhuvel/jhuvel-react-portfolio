@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Introduction from './components/Introduction.jsx'
 import About from './components/About.jsx'
+import Project from './components/Project.jsx'
 // import Experience from './components/Experience.jsx'
 // import TechStack from './components/TechStack.jsx'
 import './App.css'
@@ -20,9 +21,12 @@ function App() {
             <Experience />
           </Suspense>
         </div>
-        <Suspense fallback={<div/>}>
+        <div className='flex gap-5 max-sm:flex-col'>
+          <Suspense fallback={<div/>}>
             <TechStack />
-        </Suspense>
+          </Suspense>
+          <Project />
+        </div>
     </div>
   )
 }
