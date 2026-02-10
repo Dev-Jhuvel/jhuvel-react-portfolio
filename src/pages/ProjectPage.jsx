@@ -9,7 +9,7 @@ const ProjectPage = () =>{
        <h1 className="font-bold text-2xl text-left my-3">Recent Projects</h1>
         <div className="w-full flex flex-wrap gap-5">
             {projects.map((project, key) =>(
-                <a className="text-left border border-gray-300 rounded-md px-3 py-4 flex w-[45%]"
+                <a className="text-left border border-gray-300 rounded-md px-3 py-4 flex w-full md:w-[45%] "
                     href={project.site} 
                     target="_blank" 
                     key={key}
