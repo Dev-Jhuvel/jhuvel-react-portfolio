@@ -1,34 +1,31 @@
-import React, { Suspense, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Introduction from './components/Introduction.jsx'
-import About from './components/About.jsx'
-import Project from './components/Project.jsx'
+import React, { Suspense, useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import Introduction from "./components/Introduction.jsx";
+import About from "./components/About.jsx";
+import Project from "./components/Project.jsx";
 // import Experience from './components/Experience.jsx'
 // import TechStack from './components/TechStack.jsx'
-import './App.css'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProjectPage from "./pages/ProjectPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
-  const Experience = React.lazy(() => import('./components/Experience.jsx'));
-  const TechStack = React.lazy(() => import('./components/TechStack.jsx'));
+  const Experience = React.lazy(() => import("./components/Experience.jsx"));
+  const TechStack = React.lazy(() => import("./components/TechStack.jsx"));
 
   return (
-    <div className='w-full'>
-        <Introduction/>
-        <div className='flex gap-5 max-sm:flex-col'>
-          <About />
-          <Suspense fallback={<div/>}>
-            <Experience />
-          </Suspense>
-        </div>
-        <div className='flex gap-5 max-sm:flex-col'>
-          <Suspense fallback={<div/>}>
-            <TechStack />
-          </Suspense>
-          <Project />
-        </div>
+    <div className="w-full">
+      <Introduction />
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/projects" element={<ProjectPage />}></Route>
+          </Routes>
+        </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

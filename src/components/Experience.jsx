@@ -1,16 +1,8 @@
 import { BriefcaseBusiness, ChevronsLeftRightEllipsis, Hamburger, Handshake, Link, FileTypeCorner, GraduationCap, BookOpenCheck } from "lucide-react";
 import { useState } from "react";
+import { experiences } from "../../constants";
 
 function Experience(){
-    const experiences = [
-        {title : "Junior Software Engineer", company : "OrangeApps", year : 2025, icon: ChevronsLeftRightEllipsis},
-        {title : "BS Information Technology", company : "CvSU Cavite City Campus", year : 2025, icon: GraduationCap},
-        {title : "Service Crew Trainer", company : "Mcdonald's Kawit Centennial", year : 2024, icon: Hamburger},
-        {title : "Technical Support (College OJT) ", company : "Municipality of Rosario Cavite", year : 2023, icon: Handshake},
-        {title : "Backlink Acquisition Strategist ", company : "Trafficbet", year : 2023, icon: Link},
-        {title : "CSS NCII ", company : "CNHS SHS", year : 2019, icon: BookOpenCheck},
-        {title : "Student Assistant (SHS OJT) ", company : "Datacom, Rosario Cavite", year : 2019, icon: FileTypeCorner},
-    ];
     const [Icon, setIcon] = useState(BriefcaseBusiness);
     return <div className="w-[30%] border border-gray-300 rounded-xl p-2 mb-5 max-sm:w-full animate-fade-left animate-delay-500 animate-duration-500 max-sm:animate-delay-1000">
         <h1 className="text-2xl font-bold text-left pl-2 flex items-center p-1 max-sm:text-xl"><Icon className="mr-5" />Experience</h1>
