@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Simple Hangman Game",
     description: "Learn React Hooks by Creating a game",
-    site: "https://react-typescript-hangman-1.onrender.com",
+    site: "https://react-typescript-hangman.onrender.com",
     icon: "react-original",
     folder: "/images/Hangman/",
     image: "Lose",
