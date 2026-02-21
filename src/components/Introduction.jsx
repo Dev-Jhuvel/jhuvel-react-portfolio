@@ -1,8 +1,8 @@
 import { useState } from "react";
-// import profile from "../images/profile.jpg";
-import profile_1 from "../images/profile_1.png";
-import profile_2 from "../images/profile_2.png";
-import profile_3 from "../images/profile_3.png";
+// import profile from "../images/profiles/profile.jpg";
+import profile_1 from "../images/Profiles/profile_1.png";
+import profile_2 from "../images/Profiles/profile_2.png";
+import profile_3 from "../images/Profiles/profile_3.png";
 import { MapPin, BriefcaseBusiness, BadgeCheck, Mail } from "lucide-react";
 function Introduction() {
     const [profile, setProfile] = useState(profile_1);
