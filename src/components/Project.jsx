@@ -1,4 +1,4 @@
-import { ArrowBigRight, Blocks, PanelsTopBottom } from "lucide-react";
+import { ArrowBigRight, ArrowRight, Blocks, PanelsTopBottom } from "lucide-react";
 import { useState } from "react";
 import { projects } from "../../constants";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ function Project(){
         <div className="w-full border border-gray-300 rounded-xl p-2 max-sm:w-full animate-fade-left animate-delay-2000 animate-duration-500 max-sm:animate-delay-2500">
             <div className="flex items-center justify-between">
                 <h1 className="text-2xl font-bold text-left pl-2 flex items-center p-1 max-sm:text-xl"><PanelsTopBottom className="mr-5" />Recent Projects</h1>
-                <Link to="/projects" className="flex items-center mr-5 hover:text-blue-500">View all <ArrowBigRight /></Link>
+                <Link to="/projects" className="flex items-center mr-8 hover:text-blue-500">View all <ArrowRight className="ml-3" /></Link>
             </div>
             <div className="flex flex-col gap-2">
                 {projects.slice(0,2).map((value, key) =>(

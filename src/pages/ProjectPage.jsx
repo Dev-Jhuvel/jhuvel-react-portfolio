@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
 import { projects } from "../../constants";
-import { ChevronLeftCircle, ChevronRightCircle } from "lucide-react";
+import { ChevronLeftCircle, ArrowLeft } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
 
 const ProjectPage = () =>{
     const [hoveredProj, setHoveredProj] = useState(false);
     
     return (
        <>
+       <Link to="/" className="flex font-bold items-center border rounded-2xl w-30 py-1 justify-center"><ArrowLeft className="mr-1" /> Go Back </Link>
        <h1 className="font-bold text-2xl text-left my-3">Recent Projects</h1>
-        <div className="w-full flex flex-wrap gap-5 md:">
-            {projects.map((project, key) =>{
+        <div className="w-full flex flex-wrap gap-5">
+            {projects.sort((a,b)=> b.year - a.year).map((project, key) =>{
                 return (
-                <ProjectCard key={key} project={project}  />
+                <ProjectCard key={key} project={project} projectKey={key}  />
                 )
                 // <a className="text-left border border-gray-300 rounded-md px-3 py-4 flex w-full md:w-[45%] "
                 //     href={project.site} 
