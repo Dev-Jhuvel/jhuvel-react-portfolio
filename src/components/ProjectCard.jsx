@@ -9,14 +9,14 @@ const ProjectCard = ({project, projectKey}) =>{
     const image = project.images[index];
     const newKey = projectKey + 1;
     return (
-        <div className={`text-left border border-gray-300 rounded-md px-3 py-4 w-full md:w-[45%] animate-fade-${newKey % 2 === 0 ? 'left': 'right'}`}>
+        <div className={`text-left border border-gray-300 rounded-md px-3 py-4 w-full lg:w-[49%] animate-fade-${newKey % 2 === 0 ? 'left': 'right'}`}>
             <div className="relative overflow-hidden border border-gray-300 rounded-md h-65">
                 <div style={{backgroundImage: `url(${project.folder}${image}.png)`}} 
                 className={`border border-gray-300 rounded-md h-65 bg-contain bg-no-repeat bg-center flex items-center sm:bg-cover animate-fade-left`}>
                     {totalImages > 1 && (
                         <>
                             <ChevronLeft className="hover:bg-black hover:text-white bg-white border rounded-full p-0 size-8 ml-3" onClick={()=> setIndex((prev) => (prev - 1 + totalImages) % totalImages)} />
-                            <ChevronRight className="hover:bg-black hover:text-white bg-white border rounded-full p-0 size-8 ml-auto mr-3" onClick={()=> setIndex((prev) => (prev + 1) % totalImages)} />
+                            <ChevronRight className="hover:bg-black hover:text-white bg-white border rounded-full p-0 size-8 ml-auto mr-3" onClick={()=> setIndex((prev) => (prev + 1) % totalImages)}  />
                         </>
                     )}
                 </div>

@@ -3,6 +3,7 @@ import About from '../components/About.jsx'
 import Project from '../components/Project.jsx'
 import Experience from '../components/Experience.jsx'
 import TechStack from '../components/TechStack.jsx'
+import Footer from '../components/Footer.jsx'
 
 const HomePage = () =>{
     return (
@@ -14,11 +15,12 @@ const HomePage = () =>{
             </Suspense>
             </div>
             <div className='flex gap-5 max-sm:flex-col'>
-            <Suspense fallback={<div/>}>
+                <Suspense fallback={<div/>}>
                 <TechStack />
-            </Suspense>
-            <Project />
+                </Suspense>
+                <Project />
             </div>
+            <Footer />
         </>
     )
 }
