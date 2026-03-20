@@ -7,7 +7,7 @@ import Footer from '../components/Footer.jsx'
 
 const HomePage = () =>{
     return (
-        <>
+        <main className='px-5 pb-5'>
             <div className='flex gap-5 max-sm:flex-col'>
             <About />
             <Suspense fallback={<div/>}>
@@ -21,7 +21,7 @@ const HomePage = () =>{
                 <Project />
             </div>
             <Footer />
-        </>
+        </main>
     )
 }
 

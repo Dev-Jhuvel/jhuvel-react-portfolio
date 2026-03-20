@@ -1,11 +1,14 @@
 import { Lightbulb } from "lucide-react";
 import { useState } from "react";
+import { useTheme } from "../ThemeContext";
 
 function About() {
   const [isHover, setIsHover] = useState(false);
+  const darkTheme = useTheme();
+  
   return (
-    <div
-      className="w-[75%] border border-gray-300 rounded-xl py-3 px-8 mb-5 max-sm:w-full animate-fade-right"
+    <section
+      className={`${darkTheme ? 'bg-[#161618]' : ''} w-[75%] border border-gray-300 rounded-xl py-3 px-8 mb-5 max-sm:w-full animate-fade-right`}
       onMouseOver={() => setIsHover(true)}
       onMouseOut={() => setIsHover(false)}
     >
@@ -24,7 +27,7 @@ function About() {
         <br />
         As a <strong>Junior Software Engineer</strong>, I collaborate closely with managers, QA specialists, senior developers, and clients to deliver reliable solutions. These experiences have sharpened my adaptability, communication, and teamwork skills, while reinforcing the importance of resilience and customer‑centric thinking in every project I build.
       </p>
-    </div>
+    </section>
   );
 }
 
