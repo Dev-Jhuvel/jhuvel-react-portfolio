@@ -3,7 +3,6 @@ import Introduction from "./components/Introduction.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import { ThemeProvider, useTheme } from "./ThemeContext.jsx";
-import ThemeButton from "./components/ThemeButton.jsx";
 
 function AppContent() {
   const darkTheme = useTheme();
@@ -13,8 +12,6 @@ function AppContent() {
     >
       <main className="max-w-screen-xl m-auto">
         <Introduction />
-        <ThemeButton />
-
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />

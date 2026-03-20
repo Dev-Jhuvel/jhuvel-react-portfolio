@@ -38,7 +38,7 @@ const ProjectCard = ({ project, projectKey }) => {
         <h3 className="font-bold text-2xl">{project.title}</h3>
         <p className="italic">{project.description}</p>
         {project.site ? (
-          <a className="underline" href={project.site}>
+          <a className="underline" target="_blank" href={project.site}>
             {" "}
             Visit Site{" "}
           </a>

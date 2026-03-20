@@ -4,12 +4,14 @@ import profile_1 from "../images/Profiles/profile_1.png";
 import profile_2 from "../images/Profiles/profile_2.png";
 import profile_3 from "../images/Profiles/profile_3.png";
 import { MapPin, BriefcaseBusiness, BadgeCheck, Mail } from "lucide-react";
+
 import { useTheme } from "../ThemeContext";
+import ThemeButton from "./ThemeButton";
 function Introduction() {
       const darkTheme = useTheme();
     const [profile, setProfile] = useState(profile_1);
   return (
-    <div className={` w-full flex rounded-xl px-5 py-4 max-sm:px-3`}>
+    <div className={` w-full relative flex rounded-xl px-5 py-4 max-sm:px-3`}>
       <div className="size-35 mr-8 max-sm:size-30 max-sm:mr-2">
         <img className="w-full h-full m-auto rounded-2xl transition duration-300 ease-in-out cursor-pointer" src={profile} onMouseOver={() => setProfile(profile_2)} onMouseOut={() => setProfile(profile_1)} onClick={() => setProfile(profile_3)} />
       </div>
@@ -29,6 +31,7 @@ function Introduction() {
           <span className="max-sm:hidden"> / devjhuvel@gmail.com</span>
         </p>
       </div>
+      <ThemeButton />
     </div>
   );
 }
