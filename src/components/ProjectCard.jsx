@@ -21,13 +21,13 @@ const ProjectCard = ({ project, projectKey }) => {
           {totalImages > 1 && (
             <>
               <ChevronLeft
-                className={`${darkTheme ? "bg-[#1b1b1f] hover:bg-gray-200 hover:text-black  text-white" : "bg-gray-100 hover:bg-[#242429] hover:text-white  text-white "} border rounded-full p-0 size-8 ml-3`}
+                className={`${darkTheme ? "bg-[#1b1b1f] hover:bg-gray-200 hover:text-black  text-white" : "bg-gray-100 hover:bg-[#242429] hover:text-white  text-black "} border rounded-full p-0 size-8 ml-3`}
                 onClick={() =>
                   setIndex((prev) => (prev - 1 + totalImages) % totalImages)
                 }
               />
               <ChevronRight
-                className={`${darkTheme ? "bg-[#1b1b1f] hover:bg-gray-200 hover:text-black  text-white" : "bg-gray-100 hover:bg-[#242429] hover:text-white  text-white "} border rounded-full p-0 size-8 ml-auto mr-3`}
+                className={`${darkTheme ? "bg-[#1b1b1f] hover:bg-gray-200 hover:text-black  text-white" : "bg-gray-100 hover:bg-[#242429] hover:text-white  text-black "} border rounded-full p-0 size-8 ml-auto mr-3`}
                 onClick={() => setIndex((prev) => (prev + 1) % totalImages)}
               />
             </>
