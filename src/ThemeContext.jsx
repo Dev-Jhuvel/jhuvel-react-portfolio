@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const ThemeContext = React.createContext();
 const ThemeUpdateContext = React.createContext();
@@ -12,7 +12,14 @@ export function useThemeUpdate(){
 }
 
 export function ThemeProvider({children}){
-    const [darkTheme, setDarkTheme] = useState(true);
+    const storedTheme = localStorage.getItem('isDark');
+    const [darkTheme, setDarkTheme] = useState(
+    storedTheme ? storedTheme === 'true' : true
+    );
+
+    useEffect(()=>{
+        localStorage.setItem('isDark', darkTheme.toString());
+    },[darkTheme])
 
     function toggleTheme(){
         setDarkTheme(prevTheme => !prevTheme);

@@ -11,7 +11,7 @@ function Introduction() {
       const darkTheme = useTheme();
     const [profile, setProfile] = useState(profile_1);
   return (
-    <div className={` w-full relative flex rounded-xl px-5 py-4 max-sm:px-3`}>
+    <div className={` w-full relative flex rounded-xl px-5 py-4 max-sm:px-3 pt-15 pb-15`}>
       <div className="size-35 mr-8 max-sm:size-30 max-sm:mr-2">
         <img className="w-full h-full m-auto rounded-2xl transition duration-300 ease-in-out cursor-pointer" src={profile} onMouseOver={() => setProfile(profile_2)} onMouseOut={() => setProfile(profile_1)} onClick={() => setProfile(profile_3)} />
       </div>

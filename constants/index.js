@@ -99,7 +99,8 @@ const projects = [
   {
     title: "Au Bon",
     description: "Laravel React CMS",
-    site: "https://au-bon.onrender.com/",
+    site: null,
+    // site: "https://au-bon.onrender.com/",
     icon: "laravel-original",
     folder: "/images/AuBon/",
     image: "Products",
@@ -213,6 +214,32 @@ const projects = [
     images: [
       "About",
       "Projects",
+    ],
+  },
+  {
+    title: "Todo List",
+    description: "Advance React TypeScript Project",
+    site: "https://todolist-ejkk.onrender.com/",
+    icon: "html-original",
+    folder: "/images/TodoList/",
+    image: "Home",
+    year: 2026,
+    technologies: [
+      "html5-plain",
+      "javascript-plain",
+      "css3-plain",
+      "bootstrap-plain",
+      "typescript-plain",
+      "react-original",
+      "javascript-plain",
+      "git-plain",
+    ],
+    images: [
+      "Create",
+      "Edit",
+      "Home",
+      "Show",
+      "EditTags",
     ],
   },
 ];

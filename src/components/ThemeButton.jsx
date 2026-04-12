@@ -7,7 +7,7 @@ function ThemeButton(){
     return (
         <button
           onClick={toggleTheme}
-          className={`absolute right-5 top-10 px-1.5 md:px-2 py-1 border-2 rounded-full 
+          className={`absolute right-3 top-5 px-1.5 md:px-2 py-1 border-2 rounded-full 
               transition-colors duration-500 ease-in-out
               ${darkTheme ? "bg-[#161618] text-white" : "bg-gray-100 text-black"}`}
         >

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Technology from "./Technology";
 import { useTheme } from "../ThemeContext";
+import { useBreakpoints } from "../useBreakpoints";
+
 
 const ProjectCard = ({ project, projectKey }) => {
   const darkTheme = useTheme();
@@ -9,9 +11,14 @@ const ProjectCard = ({ project, projectKey }) => {
   const totalImages = project.images.length;
   const image = project.images[index];
   const newKey = projectKey + 1;
+  const { isMobile } = useBreakpoints();
+  
+  const animationDirection = isMobile ? "right" : (newKey % 2 === 0 ? "left" : "right")
   return (
-    <div
-      className={`project-card text-left border border-gray-300 rounded-md px-3 py-4 w-full lg:w-[49%] animate-fade-${newKey % 2 === 0 ? "left" : "right"} ${darkTheme ? "bg-[#161618]" : ""}`}
+    <div 
+      data-aos={`fade-${animationDirection}`}
+      data-aos-once={false}
+      className={`project-card text-left border border-gray-300 rounded-md px-3 py-4 w-full lg:w-[49%] ${darkTheme ? "bg-[#161618]" : ""}`}
     >
       <div className="relative overflow-hidden border border-gray-300 rounded-md h-65">
         <div
@@ -39,16 +46,15 @@ const ProjectCard = ({ project, projectKey }) => {
         <p className="italic">{project.description}</p>
         {project.site ? (
           <a className="underline" target="_blank" href={project.site}>
-            {" "}
-            Visit Site{" "}
+            Visit Site
           </a>
         ) : (
           <p>&nbsp;</p>
         )}
       </div>
       <div className="flex gap-3 mt-auto py-2">
-        {project.technologies.map((tech) => (
-          <Technology tech={tech} size="2xl" />
+        {project.technologies.map((tech, techKey) => (
+          <Technology key={techKey} tech={tech} id={techKey} size="2xl" />
         ))}
       </div>
     </div>
