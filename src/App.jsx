@@ -2,7 +2,7 @@ import "./App.css";
 import { ThemeProvider } from "./ThemeContext.jsx";
 import AppContent from "./AppContext.jsx";
 import AOS from "aos";
-// import "aos/dist/aos.css";
+import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { useBreakpoints } from "./useBreakpoints"
 
