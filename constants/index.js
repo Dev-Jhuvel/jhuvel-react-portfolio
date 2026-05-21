@@ -11,6 +11,21 @@ const experiences = [
 ];
 
 const projects = [
+    {
+    title: "Ramen House",
+    description: "Ramen House Landing Page with Menu Page ",
+    site: "https://ramen-house.onrender.com/",
+    icon: "react-original",
+    folder: "/images/RamenHouse/",
+    image: "Hero",
+    year: 2026,
+    technologies: [
+      "javascript-plain",
+      "react-original",
+      "tailwindcss-original",
+    ],
+    images: ["Hero", "Products", "About", "Reviews", "Contacts", "MenuPage"],
+  },
   {
     title: "Velvet Pour",
     description: "Landing Page Created with React and GSAP ",
