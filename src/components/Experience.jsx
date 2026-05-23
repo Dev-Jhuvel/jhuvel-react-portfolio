@@ -30,8 +30,8 @@ function Experience() {
       <ul className="list-none w-full">
         {experiences.map((value, index) => (
           <li
-            data-aos="fade-left"
-            data-aos-delay={1000}
+            // data-aos="fade-left"
+            // data-aos-delay={1000}
             className={`font-bold text-xs flex justify-between text-left items-center my-2 rounded-md px-3 py-1 cursor-pointer max-sm:text-sm 
             ${darkTheme ? "bg-[#1b1b1f] hover:bg-[#242429] text-white" : "bg-gray-100 hover:bg-gray-200 text-black"}`}
             key={index}
